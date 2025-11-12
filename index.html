@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawano Sushi - Restaurante Japonês</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .image-placeholder {
+            background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+            border: 2px dashed #6b7280;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-size: 14px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .image-placeholder:hover {
+            border-color: #dc2626;
+            background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%);
+            color: #fca5a5;
+        }
+        
+        .hero-bg {
+            background: #000000;
+        }
+        
+        .section-bg {
+            background: #000000;
+        }
+        
+        .contact-bg {
+            background: #000000;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+        }
+        
+        .animate-delay-400 {
+            animation-delay: 0.4s;
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+<body class="h-full font-sans">
+    <!-- Header -->
+    <header class="bg-black shadow-lg sticky top-0 z-50 border-b border-red-900">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="image-placeholder w-12 h-16 rounded-lg mr-4 bg-gradient-to-b from-red-900 to-red-700 border border-red-600">
+                        <div class="text-center text-white text-xs">
+                            <div class="text-lg">🍣</div>
+                            <div class="text-[8px]">LOGO</div>
+                        </div>
+                    </div>
+                    <h1 class="text-2xl font-bold text-white tracking-wide">Kawano Sushi</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-1">
+                        <a href="#inicio" class="text-white hover:text-red-400 hover:bg-red-900 hover:bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border border-transparent hover:border-red-800">Início</a>
+                        <a href="#sobre" class="text-white hover:text-red-400 hover:bg-red-900 hover:bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border border-transparent hover:border-red-800">Sobre</a>
+                        <a href="#galeria" class="text-white hover:text-red-400 hover:bg-red-900 hover:bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border border-transparent hover:border-red-800">Galeria</a>
+                        <a href="#depoimentos" class="text-white hover:text-red-400 hover:bg-red-900 hover:bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border border-transparent hover:border-red-800">Depoimentos</a>
+                        <a href="#contato" class="text-white hover:text-red-400 hover:bg-red-900 hover:bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border border-transparent hover:border-red-800">Contato</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-red-400 focus:outline-none p-2 rounded-lg hover:bg-red-900 hover:bg-opacity-20 transition-all duration-300">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-black border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="text-white hover:text-red-400 block px-3 py-2 rounded-md text-base font-medium">Início</a>
+                <a href="#sobre" class="text-white hover:text-red-400 block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+                <a href="#galeria" class="text-white hover:text-red-400 block px-3 py-2 rounded-md text-base font-medium">Galeria</a>
+                <a href="#depoimentos" class="text-white hover:text-red-400 block px-3 py-2 rounded-md text-base font-medium">Depoimentos</a>
+                <a href="#contato" class="text-white hover:text-red-400 block px-3 py-2 rounded-md text-base font-medium">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-bg text-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-fade-in-up">
+                        <h2 class="text-4xl md:text-6xl font-bold mb-6">Kawano Sushi</h2>
+                        <p class="text-xl md:text-2xl mb-8 text-gray-300">Restaurante de comida japonesa que busca a excelência, atendendo nos formatos delivery e presencial</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <span class="text-red-400 mr-3">📞</span>
+                                <span class="text-lg">(41) 99767-9231</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-red-400 mr-3">🕒</span>
+                                <span class="text-lg">Terça a Domingo das 19h às 22h30</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-red-400 mr-3">📍</span>
+                                <span class="text-lg">Rua Alexandre Gutierrez 552 / Água Verde</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-red-400 mr-3">👥</span>
+                                <span class="text-lg">Máximo 14 pessoas - Apenas com reserva</span>
+                            </div>
+                        </div>
+                        <a href="#contato" class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 inline-block shadow-lg hover:shadow-xl transform hover:scale-105 border border-red-500">
+                            Fazer Reserva
+                        </a>
+                    </div>
+                    <div class="animate-fade-in-up animate-delay-200">
+                        <div class="image-placeholder h-96 rounded-lg">
+                            <div class="text-center">
+                                <div class="text-4xl mb-2">🍣</div>
+                                <div>Espaço para imagem principal<br>do restaurante</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="bg-black py-20 border-t border-red-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4">Sobre o Chef</h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-red-600 to-red-400 mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-fade-in-up">
+                        <div class="image-placeholder h-80 rounded-lg bg-gray-800 border-gray-600">
+                            <div class="text-center text-gray-300">
+                                <div class="text-4xl mb-2">👨‍🍳</div>
+                                <div>Espaço para foto<br>do Chef Roger</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-fade-in-up animate-delay-200">
+                        <h3 class="text-2xl font-bold text-white mb-6">Excelência e Inovação</h3>
+                        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                            O chef Roger possui 20 anos de experiência na área, criando diariamente pratos únicos com peixes nobres e iguarias especiais para os mais exigentes paladares.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+                            No delivery, oferecemos grande variedade de pratos frios e quentes com os mais nobres e variados peixes. No atendimento presencial, uma sequência de pratos é servida em ambiente aconchegante e reservado.
+                        </p>
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                            Nossa casa é pequena, recebendo no máximo 14 pessoas por dia, garantindo um atendimento exclusivo apenas com reservas antecipadas.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-red-500">14</div>
+                                <div class="text-gray-400">Pessoas por Dia</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-red-500">100%</div>
+                                <div class="text-gray-400">Peixes Nobres</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="galeria" class="py-20 bg-black border-t border-red-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4">Nossa Galeria</h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-red-600 to-red-400 mx-auto rounded-full mb-4"></div>
+                    <p class="text-lg text-gray-300">Conheça nossos pratos exclusivos, peixes nobres e ambiente aconchegante</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="animate-fade-in-up">
+                        <div class="image-placeholder h-64 rounded-lg bg-gray-800 border-gray-600">
+                            <div class="text-center text-gray-300">
+                                <div class="text-3xl mb-2">🍱</div>
+                                <div>Sequência de pratos<br>presencial</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-fade-in-up animate-delay-200">
+                        <div class="image-placeholder h-64 rounded-lg bg-gray-800 border-gray-600">
+                            <div class="text-center text-gray-300">
+                                <div class="text-3xl mb-2">🍜</div>
+                                <div>Pratos quentes<br>delivery</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-fade-in-up animate-delay-400">
+                        <div class="image-placeholder h-64 rounded-lg bg-gray-800 border-gray-600">
+                            <div class="text-center text-gray-300">
+                                <div class="text-3xl mb-2">🏮</div>
+                                <div>Ambiente aconchegante<br>e reservado</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-fade-in-up">
+                        <div class="image-placeholder h-64 rounded-lg bg-gray-800 border-gray-600">
+                            <div class="text-center text-gray-300">
+                                <div class="text-3xl mb-2">🥢</div>
+                                <div>Peixes nobres<br>e iguarias</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-fade-in-up animate-delay-200">
+                        <div class="image-placeholder h-64 rounded-lg bg-gray-800 border-gray-600">
+                            <div class="text-center text-gray-300">
+                                <div class="text-3xl mb-2">🍣</div>
+                                <div>Pratos frios<br>delivery</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-fade-in-up animate-delay-400">
+                        <div class="image-placeholder h-64 rounded-lg bg-gray-800 border-gray-600">
+                            <div class="text-center text-gray-300">
+                                <div class="text-3xl mb-2">🍶</div>
+                                <div>Criações diárias<br>do chef</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="depoimentos" class="py-20 bg-black border-t border-red-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-white mb-4">Depoimentos dos Clientes</h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-red-600 to-red-400 mx-auto rounded-full mb-4"></div>
+                    <p class="text-lg text-gray-300">O que nossos clientes dizem sobre nossa experiência gastronômica</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="animate-fade-in-up">
+                        <div class="bg-gray-900 bg-opacity-50 p-8 rounded-xl border border-red-900 hover:border-red-700 transition-all duration-300 shadow-lg hover:shadow-xl h-80 flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    E
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-white font-semibold text-lg">Ester Isfer</h4>
+                                    <div class="flex text-yellow-400 text-sm">
+                                        ⭐⭐⭐⭐⭐
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed flex-grow">
+                                "Nunca comi uma comida japonesa tão boa, pratos incríveis, um melhor que outro. O Nametake foi demais. Voltaremos muitas vezes!"
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fade-in-up animate-delay-200">
+                        <div class="bg-gray-900 bg-opacity-50 p-8 rounded-xl border border-red-900 hover:border-red-700 transition-all duration-300 shadow-lg hover:shadow-xl h-80 flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    R
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-white font-semibold text-lg">Rafaela Gadens</h4>
+                                    <div class="flex text-yellow-400 text-sm">
+                                        ⭐⭐⭐⭐⭐
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed flex-grow">
+                                "Maravilhosa! Desde o começo atendimento impecável, ambiente lindo e super aconchegante. Preço justíssimo, e qualidade excepcional, foi nossa primeira vez e com toda certeza voltaremos!"
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fade-in-up animate-delay-400">
+                        <div class="bg-gray-900 bg-opacity-50 p-8 rounded-xl border border-red-900 hover:border-red-700 transition-all duration-300 shadow-lg hover:shadow-xl h-80 flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    M
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-white font-semibold text-lg">Marcelle Esteves</h4>
+                                    <div class="flex text-yellow-400 text-sm">
+                                        ⭐⭐⭐⭐⭐
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed flex-grow">
+                                "Restaurante lindo, aconchegante, romântico! Sem contar no capricho no preparo das peças e o sabor maravilhoso! Fiquei encantada com tudo! Atendimento excelente e ótimas opções de bebida! Voltarei sempre que estiver em Curitiba 😍"
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fade-in-up">
+                        <div class="bg-gray-900 bg-opacity-50 p-8 rounded-xl border border-red-900 hover:border-red-700 transition-all duration-300 shadow-lg hover:shadow-xl h-80 flex flex-col">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                                    I
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-white font-semibold text-lg">Iris Zoski</h4>
+                                    <div class="flex text-yellow-400 text-sm">
+                                        ⭐⭐⭐⭐⭐
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 leading-relaxed flex-grow">
+                                "Fantastic experience! The dishes are super fresh and creative and the interior decor beautiful. But best of all is the very kind and attentive service given here. Highly recommend for a relaxed dinner with friends."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="bg-black text-white py-20 border-t border-red-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-4">Contato e Localização</h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-red-600 to-red-400 mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="animate-fade-in-up">
+                        <h3 class="text-2xl font-bold mb-8">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                    <span class="text-2xl">📞</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Telefones</h4>
+                                    <p class="text-red-100">(41) 99767-9231</p>
+                                    <p class="text-red-100">(41) 3027-3492</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                    <span class="text-2xl">🕒</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Horário de Funcionamento</h4>
+                                    <p class="text-red-100">De terça a domingo</p>
+                                    <p class="text-red-100">das 19h às 22h30</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white bg-opacity-20 rounded-full p-3 mr-4">
+                                    <span class="text-2xl">📍</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg mb-1">Endereço</h4>
+                                    <p class="text-red-100">Rua Alexandre Gutierrez 552</p>
+                                    <p class="text-red-100">Água Verde - Curitiba/PR</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <a href="tel:+5541997679231" class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 inline-block mr-4 mb-4 shadow-lg hover:shadow-xl transform hover:scale-105 border border-red-500">
+                                Ligar Agora
+                            </a>
+                            <a href="https://wa.me/5541997679231" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 inline-block mb-4 shadow-lg hover:shadow-xl transform hover:scale-105 border border-green-500">
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fade-in-up animate-delay-200">
+                        <h3 class="text-2xl font-bold mb-8">Localização</h3>
+                        <div class="image-placeholder h-80 rounded-lg bg-white bg-opacity-10 border-white border-opacity-30">
+                            <div class="text-center text-white">
+                                <div class="text-4xl mb-2">🗺️</div>
+                                <div>Espaço para mapa<br>ou foto da fachada</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <a href="https://maps.google.com/?q=Rua+Alexandre+Gutierrez+552+Água+Verde+Curitiba" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 inline-block shadow-lg hover:shadow-xl transform hover:scale-105 border border-red-500">
+                                Ver no Google Maps
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">🍣 Kawano Sushi</h3>
+                <p class="text-gray-400 mb-4">Autêntica culinária japonesa em Curitiba</p>
+                <div class="flex justify-center space-x-6 text-sm text-gray-400">
+                    <span>(41) 99767-9231</span>
+                    <span>•</span>
+                    <span>Rua Alexandre Gutierrez 552</span>
+                    <span>•</span>
+                    <span>Água Verde</span>
+                </div>
+                <div class="mt-4 text-sm text-gray-500">
+                    © 2024 Kawano Sushi. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all animated elements
+        document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992a23d4b4c2cb5c',t:'MTc2MTE0ODExNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
+
